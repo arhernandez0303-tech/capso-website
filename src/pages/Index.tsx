@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { BookOpen, Users, GraduationCap, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
-import heroImage from "@/assets/hero-placeholder.jpg";
+import heroImage from "@/assets/hero-image.jpg";
 
 const pillars = [
   {
