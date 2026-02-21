@@ -43,7 +43,7 @@ const Index = () => {
         <div className="relative container mx-auto px-4 lg:px-8 py-24 md:py-36">
           <div className="max-w-2xl">
             <p className="text-primary-foreground/80 text-sm font-semibold uppercase tracking-widest mb-3">
-              Coordinating Association of President's Scholars Organizations
+              Coordinated Admissions Program Student Organization
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
               Empowering Paths &amp; Uniting Futures

@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-10 pt-6 border-t border-secondary-foreground/20 text-center text-xs text-secondary-foreground/50">
-          © {new Date().getFullYear()} CAPSO — Coordinating Association of President's Scholars Organizations. All rights reserved.
+          © {new Date().getFullYear()} CAPSO — Coordinated Admissions Program Student Organization. All rights reserved.
         </div>
       </div>
     </footer>
