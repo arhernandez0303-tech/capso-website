@@ -14,8 +14,8 @@ const coreValues = [
   },
   {
     icon: Lightbulb,
-    title: "Development & Advancement",
-    description: "Championing personal growth, academic excellence, and professional readiness for every member.",
+    title: "Progress & Growth",
+    description: "Championing personal development, academic excellence, and professional readiness for every member.",
   },
   {
     icon: Users,
