@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <img src={capsoLogo} alt="CAPSO" className="h-10 w-auto mb-4 brightness-0 invert" />
             <p className="text-sm text-primary-foreground/70 max-w-xs">
-              Empowering Paths and Uniting Futures — the statewide student organization for CAP students across Texas.
+              Empowering Paths and Uniting Futures
             </p>
           </div>
 
