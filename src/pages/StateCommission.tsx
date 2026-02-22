@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button";
 import { FileText, ExternalLink } from "lucide-react";
 
 const leadershipRoles = [
-  { title: "Executive Director", name: "Coming Soon" },
-  { title: "Associate Director", name: "Coming Soon" },
-  { title: "Director of Organizational Development", name: "Coming Soon" },
-  { title: "Director of Programs", name: "Coming Soon" },
-  { title: "Director of Marketing", name: "Coming Soon" },
-  { title: "Director of Finance", name: "Coming Soon" },
+  { title: "Executive Director", name: "Anthony Hernandez" },
+  { title: "Associate Director", name: "Cohen Moncada" },
+  { title: "Director of Organizational Development", name: "Enrico Metzger" },
+  { title: "Director of Programs", name: "Lia Tovar" },
+  { title: "Director of Marketing", name: "Faris Ebrahim" },
+  { title: "Director of Finance", name: "Josh Petite" },
 ];
 
 const governingDocs = [
