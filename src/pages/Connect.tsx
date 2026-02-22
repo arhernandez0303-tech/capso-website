@@ -63,7 +63,7 @@ const Connect = () => {
                 <h3 className="font-bold text-foreground mb-4">Follow Us</h3>
                 <div className="flex gap-3">
                   <a
-                    href="https://linkedin.com"
+                    href="http://linkedin.com/company/cap-student-organization"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 rounded-lg bg-card border border-border flex items-center justify-center hover:bg-primary/10 transition-colors"
