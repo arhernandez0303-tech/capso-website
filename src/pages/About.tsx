@@ -5,7 +5,7 @@ const coreValues = [
   {
     icon: Shield,
     title: "Integrity & Accountability",
-    description: "Upholding the highest standards of honesty, transparency, and responsibility in everything we do.",
+    description: "Upholding the highest standards of honesty and transparency while maintaining personal and collective responsibility in every initiative we undertake.",
   },
   {
     icon: Heart,
