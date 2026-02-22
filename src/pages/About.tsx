@@ -10,7 +10,7 @@ const coreValues = [
   {
     icon: Heart,
     title: "Service & Community",
-    description: "Fostering a culture of giving back, mutual support, and genuine care for one another.",
+    description: "Fostering a culture of selfless service, mutual support, and genuine care for one another.",
   },
   {
     icon: Lightbulb,
