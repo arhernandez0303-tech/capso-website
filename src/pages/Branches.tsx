@@ -8,7 +8,7 @@ const campuses = [
   { name: "UT El Paso", status: "Developing" as const, email: "capso.utep@gmail.com" },
   { name: "UT Rio Grand Valley", status: "Developing" as const, email: "capso.utrgv@gmail.com" },
   { name: "UT Permian Basin", status: "Developing" as const, email: "capso.utpb@gmail.com" },
-  { name: "Stephen F. Austin State University", status: "Active" as const, email: "capso.sfa@gmail.com" },
+  { name: "Stephen F. Austin State", status: "Active" as const, email: "capso.sfa@gmail.com" },
 ];
 
 const Branches = () => {
