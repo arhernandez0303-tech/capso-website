@@ -3,11 +3,12 @@ import { MapPin, Mail } from "lucide-react";
 
 const campuses = [
   { name: "UT Arlington", status: "Active" as const, email: "capso.uta@gmail.com" },
-  { name: "UT San Antonio", status: "Developing" as const, email: "capso.utsa@gmail.com" },
-  { name: "UT Dallas", status: "Developing" as const, email: "capso.utd@gmail.com" },
-  { name: "Texas State University", status: "Developing" as const, email: "capso.txst@gmail.com" },
-  { name: "Texas A&M University", status: "Developing" as const, email: "capso.tamu@gmail.com" },
-  { name: "Sam Houston State University", status: "Developing" as const, email: "capso.shsu@gmail.com" },
+  { name: "UT San Antonio", status: "Active" as const, email: "capso.utsa@gmail.com" },
+  { name: "UT Tyler", status: "Active" as const, email: "capso.utt@gmail.com" },
+  { name: "UT El Paso", status: "Developing" as const, email: "capso.utep@gmail.com" },
+  { name: "UT Rio Grand Valley", status: "Developing" as const, email: "capso.utrgv@gmail.com" },
+  { name: "UT Permian Basin", status: "Developing" as const, email: "capso.utpb@gmail.com" },
+  { name: "Stephen F. Austin State University", status: "Active" as const, email: "capso.sfa@gmail.com" },
 ];
 
 const Branches = () => {
