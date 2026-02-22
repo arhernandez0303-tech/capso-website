@@ -60,7 +60,7 @@ const About = () => {
               Isolated campus organizations lack the coordination, resources, and continuity needed to truly serve CAP students. Without statewide standards, students face inconsistent experiences from campus to campus.
             </p>
             <p className="text-muted-foreground">
-              CAPSO solves this by unifying campus branches under one cohesive framework — ensuring continuity, accountability, and shared purpose across every CAP community in Texas.
+              CAPSO solves this by unifying campus branches under one cohesive framework. Thus, ensuring continuity, accountability, and shared purpose across every CAP community in Texas.
             </p>
           </div>
         </div>
