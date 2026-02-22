@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <img src={capsoLogo} alt="CAPSO" className="h-10 w-auto mb-4 brightness-0 invert" />
+            <img src={capsoLogo} alt="CAPSO" className="h-12 w-auto mb-4" />
             <p className="text-sm text-primary-foreground/70 max-w-xs">
               Empowering Paths and Uniting Futures
             </p>

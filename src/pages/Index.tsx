@@ -55,10 +55,10 @@ const Index = () => {
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
                 <Link to="/about">Explore CAPSO</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button asChild size="lg" className="bg-primary-foreground text-secondary font-semibold hover:bg-primary-foreground/90">
                 <Link to="/branches">Find Your Campus</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button asChild size="lg" className="bg-primary-foreground text-secondary font-semibold hover:bg-primary-foreground/90">
                 <Link to="/state-commission">Statewide Leadership</Link>
               </Button>
             </div>
@@ -105,7 +105,7 @@ const Index = () => {
               <p className="text-primary-foreground/80 mb-8">
                 Whether you're a current CAP student, a transfer student, or someone looking to support our mission — CAPSO has a place for you.
               </p>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 font-semibold">
+              <Button asChild size="lg" className="bg-primary-foreground text-primary font-semibold hover:bg-primary-foreground/90">
                 <Link to="/connect">Get In Touch</Link>
               </Button>
             </div>
