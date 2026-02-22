@@ -20,7 +20,7 @@ const coreValues = [
   {
     icon: Users,
     title: "Collaboration & Unity",
-    description: "Building bridges across campuses to create a stronger, more connected CAP community statewide.",
+    description: "Building bridges that extend beyond the CAP program, deeply integrating our members into the broader student body. By fostering statewide connection and local engagement, we ensure every CAP student is a fully recognized and active leader within their campus community.",
   },
 ];
 
