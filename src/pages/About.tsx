@@ -37,7 +37,7 @@ const About = () => {
             Who We Are &amp; Why We Exist
           </h1>
           <p className="text-secondary-foreground/70 text-lg max-w-2xl">
-            The Coordinated Admissions Program Student Organization is the statewide body dedicated to connecting, supporting, and empowering CAP students across Texas.
+            The CAPSO is the statewide body dedicated to connecting, supporting, and empowering CAP students across Texas.
           </p>
         </div>
       </section>
@@ -48,7 +48,7 @@ const About = () => {
           <div>
             <h2 className="text-3xl font-bold text-foreground mb-6">What is CAPSO?</h2>
             <p className="text-muted-foreground mb-4">
-              CAPSO — the Coordinated Admissions Program Student Organization — is a statewide student organization built by and for CAP students. We exist to ensure that every student navigating the Coordinated Admissions Program has access to leadership development, community, and institutional support throughout their journey.
+              CAPSO — formally known as the Coordinated Admissions Program Student Organization — is a statewide organization built by and for CAP students. We exist to ensure that every student navigating the program has access to leadership development, community, and institutional support throughout their journey.
             </p>
             <p className="text-muted-foreground">
               From your CAP year at a partner institution to your transfer to UT Austin, CAPSO is there to connect and empower you every step of the way.
