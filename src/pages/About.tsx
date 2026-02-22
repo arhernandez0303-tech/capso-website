@@ -76,7 +76,7 @@ const About = () => {
               </div>
               <h2 className="text-2xl font-bold text-card-foreground mb-4">Our Mission</h2>
               <p className="text-muted-foreground">
-                To connect, support, and empower Coordinated Admissions Program students across Texas through statewide coordination, leadership development, and community building — ensuring every CAP student has the tools and resources to thrive during their CAP year and beyond.
+                To connect, support, and empower Coordinated Admissions Program students across Texas through statewide coordination, leadership development, and community building. Thus, ensuring every CAP student has the tools and resources to thrive during their CAP year and beyond.
               </p>
             </div>
             <div className="bg-card border border-border rounded-lg p-8">
@@ -85,7 +85,7 @@ const About = () => {
               </div>
               <h2 className="text-2xl font-bold text-card-foreground mb-4">Our Vision</h2>
               <p className="text-muted-foreground">
-                A future where every CAP student in Texas is part of a unified, empowered community — where leadership is cultivated, transitions are supported, and no student navigates their journey alone. CAPSO aspires to be the model for statewide student organization governance.
+                A future where every CAP student in Texas is part of a unified, empowered community. Where leadership is cultivated, transitions are supported, and no student navigates their journey alone. CAPSO aspires to be the model for statewide student organization governance.
               </p>
             </div>
           </div>
