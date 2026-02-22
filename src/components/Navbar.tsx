@@ -18,7 +18,7 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
+    <header className="sticky top-0 z-50 bg-primary/95 backdrop-blur border-b border-primary/80">
       <nav className="container mx-auto flex items-center justify-between h-16 px-4 lg:px-8">
         <Link to="/" className="flex items-center gap-3">
           <img src={capsoLogo} alt="CAPSO" className="h-10 w-auto" />
@@ -32,8 +32,8 @@ const Navbar = () => {
                 to={link.to}
                 className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                   location.pathname === link.to
-                    ? "text-primary font-semibold"
-                    : "text-foreground/70 hover:text-foreground hover:bg-muted"
+                    ? "text-primary-foreground font-semibold bg-primary-foreground/15"
+                    : "text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10"
                 }`}
               >
                 {link.label}
@@ -44,7 +44,7 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className="lg:hidden p-2 text-foreground"
+          className="lg:hidden p-2 text-primary-foreground"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -54,7 +54,7 @@ const Navbar = () => {
 
       {/* Mobile nav */}
       {mobileOpen && (
-        <div className="lg:hidden border-t border-border bg-background">
+        <div className="lg:hidden border-t border-primary-foreground/20 bg-primary">
           <ul className="flex flex-col py-2 px-4">
             {navLinks.map((link) => (
               <li key={link.to}>
@@ -63,8 +63,8 @@ const Navbar = () => {
                   onClick={() => setMobileOpen(false)}
                   className={`block px-3 py-3 text-sm font-medium rounded-md transition-colors ${
                     location.pathname === link.to
-                      ? "text-primary font-semibold bg-muted"
-                      : "text-foreground/70 hover:text-foreground hover:bg-muted"
+                      ? "text-primary-foreground font-semibold bg-primary-foreground/15"
+                      : "text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10"
                   }`}
                 >
                   {link.label}
