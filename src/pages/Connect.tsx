@@ -71,7 +71,7 @@ const Connect = () => {
                     <Linkedin className="w-5 h-5 text-foreground" />
                   </a>
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/txcapso"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 rounded-lg bg-card border border-border flex items-center justify-center hover:bg-primary/10 transition-colors"
