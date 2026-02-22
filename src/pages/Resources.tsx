@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import { FileText, BookOpen, GraduationCap, ExternalLink } from "lucide-react";
+import { FileText, BookOpen } from "lucide-react";
 
 const governingDocs = [
   { title: "CAPSO Charter", description: "The foundational document establishing CAPSO's authority, purpose, and structure." },
@@ -56,55 +56,31 @@ const Resources = () => {
 
       {/* Leadership & Organizational Resources */}
       <section className="py-20 bg-muted">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-5">
-                <BookOpen className="w-7 h-7 text-primary" />
-              </div>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Leadership &amp; Organizational Resources</h2>
-              <p className="text-muted-foreground mb-4">
-                Resources designed to support CAPSO leaders at every level — from branch officers to State Commission directors.
-              </p>
-              <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                  Handbooks &amp; guides
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                  Organizational guidelines
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                  Training materials (as available)
-                </li>
-              </ul>
-            </div>
-            <div>
-              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-5">
-                <GraduationCap className="w-7 h-7 text-primary" />
-              </div>
-              <h2 className="text-2xl font-bold text-foreground mb-4">CAP &amp; Transfer Resources</h2>
-              <p className="text-muted-foreground mb-4">
-                Academic and transition support for students navigating the Coordinated Admissions Program and their transfer to UT Austin.
-              </p>
-              <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                  Academic planning resources
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                  Transfer guides &amp; timelines
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                  External references &amp; links
-                </li>
-              </ul>
-            </div>
+        <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
+          <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-5">
+            <BookOpen className="w-7 h-7 text-primary" />
           </div>
+          <h2 className="text-2xl font-bold text-foreground mb-4">Leadership &amp; Organizational Resources</h2>
+          <p className="text-muted-foreground mb-4">
+            Resources designed to support CAPSO leaders at every level — from branch officers to State Commission directors.
+          </p>
+          <ul className="space-y-3 text-muted-foreground">
+            <li className="flex items-center gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+              Handbooks &amp; guides
+            </li>
+            <li className="flex items-center gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+              Organizational guidelines
+            </li>
+            <li className="flex items-center gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+              Training materials (as available)
+            </li>
+          </ul>
+          <p className="text-sm text-muted-foreground/70 mt-6 italic">
+            Note: CAPSO is a student organization and does not provide academic advising. For academic guidance, please consult your campus advisor or the UT Austin admissions office.
+          </p>
         </div>
       </section>
     </Layout>

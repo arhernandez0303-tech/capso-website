@@ -17,8 +17,8 @@ const pillars = [
   },
   {
     icon: GraduationCap,
-    title: "Academic & Transfer Support",
-    description: "Supporting students through their CAP year and post-transfer academic journey.",
+    title: "Student Connection",
+    description: "Bringing CAP students together to share experiences, build friendships, and navigate the journey as a community.",
   },
   {
     icon: Heart,
