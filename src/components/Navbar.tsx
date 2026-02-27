@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import capsoLogo from "@/assets/capso-logo.png";
 
 const navLinks = [
@@ -52,28 +53,41 @@ const Navbar = () => {
         </button>
       </nav>
 
-      {/* Mobile nav */}
-      {mobileOpen && (
-        <div className="lg:hidden border-t border-primary-foreground/20 bg-primary">
-          <ul className="flex flex-col py-2 px-4">
-            {navLinks.map((link) => (
-              <li key={link.to}>
-                <Link
-                  to={link.to}
-                  onClick={() => setMobileOpen(false)}
-                  className={`block px-3 py-3 text-sm font-medium rounded-md transition-colors ${
-                    location.pathname === link.to
-                      ? "text-primary-foreground font-semibold bg-primary-foreground/15"
-                      : "text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10"
-                  }`}
+      {/* Mobile nav - animated */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="lg:hidden overflow-hidden border-t border-primary-foreground/20 bg-primary"
+          >
+            <ul className="flex flex-col py-2 px-4">
+              {navLinks.map((link, i) => (
+                <motion.li
+                  key={link.to}
+                  initial={{ opacity: 0, x: -16 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.05 }}
                 >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+                  <Link
+                    to={link.to}
+                    onClick={() => setMobileOpen(false)}
+                    className={`block px-3 py-3 text-sm font-medium rounded-md transition-colors ${
+                      location.pathname === link.to
+                        ? "text-primary-foreground font-semibold bg-primary-foreground/15"
+                        : "text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };
