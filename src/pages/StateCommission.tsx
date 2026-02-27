@@ -73,7 +73,7 @@ const StateCommission = () => {
             {leadershipRoles.map((role) => (
               <div
                 key={role.title}
-                className="bg-card border border-border rounded-xl p-8 text-center flex flex-col items-center"
+                className="bg-card border border-border rounded-xl p-8 text-center flex flex-col items-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
               >
                 <img
                   src={role.image}
