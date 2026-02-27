@@ -75,11 +75,11 @@ const StateCommission = () => {
                 key={role.title}
                 className="bg-card border border-border rounded-lg p-6 text-center"
               >
-                <div className="w-20 h-20 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl text-muted-foreground font-bold">
-                    {role.name === "Coming Soon" ? "?" : role.name.split(" ").map(n => n[0]).join("")}
-                  </span>
-                </div>
+                <img
+                  src={role.image}
+                  alt={role.name}
+                  className="w-20 h-20 rounded-full object-cover mx-auto mb-4"
+                />
                 <h3 className="text-base font-bold text-card-foreground mb-1">{role.title}</h3>
                 <p className="text-sm text-muted-foreground">{role.name}</p>
               </div>
