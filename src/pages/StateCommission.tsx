@@ -3,13 +3,20 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { FileText, ExternalLink } from "lucide-react";
 
+import anthonyImg from "@/assets/anthony-hernandez.jpg";
+import cohenImg from "@/assets/cohen-moncada.jpg";
+import enricoImg from "@/assets/enrico-metzger.jpg";
+import liaImg from "@/assets/lia-tovar.jpg";
+import farisImg from "@/assets/faris-ebrahim.jpg";
+import joshImg from "@/assets/josh-petite.jpg";
+
 const leadershipRoles = [
-  { title: "Executive Director", name: "Anthony Hernandez" },
-  { title: "Associate Director", name: "Cohen Moncada" },
-  { title: "Director of Organizational Development", name: "Enrico Metzger" },
-  { title: "Director of Programs", name: "Lia Tovar" },
-  { title: "Director of Marketing", name: "Faris Ebrahim" },
-  { title: "Director of Finance", name: "Josh Petite" },
+  { title: "Executive Director", name: "Anthony Hernandez", image: anthonyImg },
+  { title: "Associate Director", name: "Cohen Moncada", image: cohenImg },
+  { title: "Director of Organizational Development", name: "Enrico Metzger", image: enricoImg },
+  { title: "Director of Programs", name: "Lia Tovar", image: liaImg },
+  { title: "Director of Marketing", name: "Faris Ebrahim", image: farisImg },
+  { title: "Director of Finance", name: "Josh Petite", image: joshImg },
 ];
 
 const governingDocs = [
