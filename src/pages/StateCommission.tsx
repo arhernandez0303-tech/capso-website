@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { FileText, ExternalLink } from "lucide-react";
+import { FileText, Linkedin } from "lucide-react";
 
 import anthonyImg from "@/assets/anthony-hernandez.jpg";
 import cohenImg from "@/assets/cohen-moncada.jpg";
@@ -88,7 +88,7 @@ const StateCommission = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
                 >
-                  <ExternalLink className="w-4 h-4" />
+                  <Linkedin className="w-5 h-5" />
                   LinkedIn
                 </a>
               </div>
