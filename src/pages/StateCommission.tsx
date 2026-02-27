@@ -3,13 +3,20 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { FileText, ExternalLink } from "lucide-react";
 
+import anthonyImg from "@/assets/anthony-hernandez.jpg";
+import cohenImg from "@/assets/cohen-moncada.jpg";
+import enricoImg from "@/assets/enrico-metzger.jpg";
+import liaImg from "@/assets/lia-tovar.jpg";
+import farisImg from "@/assets/faris-ebrahim.jpg";
+import joshImg from "@/assets/josh-petite.jpg";
+
 const leadershipRoles = [
-  { title: "Executive Director", name: "Anthony Hernandez" },
-  { title: "Associate Director", name: "Cohen Moncada" },
-  { title: "Director of Organizational Development", name: "Enrico Metzger" },
-  { title: "Director of Programs", name: "Lia Tovar" },
-  { title: "Director of Marketing", name: "Faris Ebrahim" },
-  { title: "Director of Finance", name: "Josh Petite" },
+  { title: "Executive Director", name: "Anthony Hernandez", image: anthonyImg },
+  { title: "Associate Director", name: "Cohen Moncada", image: cohenImg },
+  { title: "Director of Organizational Development", name: "Enrico Metzger", image: enricoImg },
+  { title: "Director of Programs", name: "Lia Tovar", image: liaImg },
+  { title: "Director of Marketing", name: "Faris Ebrahim", image: farisImg },
+  { title: "Director of Finance", name: "Josh Petite", image: joshImg },
 ];
 
 const governingDocs = [
@@ -68,11 +75,11 @@ const StateCommission = () => {
                 key={role.title}
                 className="bg-card border border-border rounded-lg p-6 text-center"
               >
-                <div className="w-20 h-20 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl text-muted-foreground font-bold">
-                    {role.name === "Coming Soon" ? "?" : role.name.split(" ").map(n => n[0]).join("")}
-                  </span>
-                </div>
+                <img
+                  src={role.image}
+                  alt={role.name}
+                  className="w-20 h-20 rounded-full object-cover mx-auto mb-4"
+                />
                 <h3 className="text-base font-bold text-card-foreground mb-1">{role.title}</h3>
                 <p className="text-sm text-muted-foreground">{role.name}</p>
               </div>
