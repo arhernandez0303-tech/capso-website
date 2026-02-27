@@ -13,7 +13,7 @@ import joshImg from "@/assets/josh-petite.jpg";
 const leadershipRoles = [
   { title: "Executive Director", name: "Anthony Hernandez", image: anthonyImg, linkedin: "https://www.linkedin.com/in/anthony-romeo-hernandez/" },
   { title: "Associate Director", name: "Cohen Moncada", image: cohenImg, linkedin: "https://www.linkedin.com/in/cohen-moncada-753540366/" },
-  { title: "Director of Organizational Development", name: "Enrico Metzger", image: enricoImg, linkedin: "https://linkedin.com/in/" },
+  { title: "Director of Organizational Development", name: "Enrico Metzger", image: enricoImg, linkedin: "https://www.linkedin.com/in/enricoo-metzgerr/" },
   { title: "Director of Programs", name: "Lia Tovar", image: liaImg, linkedin: "https://linkedin.com/in/" },
   { title: "Director of Marketing", name: "Faris Ebrahim", image: farisImg, linkedin: "https://linkedin.com/in/" },
   { title: "Director of Finance", name: "Josh Petite", image: joshImg, linkedin: "https://linkedin.com/in/" },
