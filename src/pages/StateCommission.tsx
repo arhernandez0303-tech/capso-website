@@ -11,12 +11,12 @@ import farisImg from "@/assets/faris-ebrahim.jpg";
 import joshImg from "@/assets/josh-petite.jpg";
 
 const leadershipRoles = [
-  { title: "Executive Director", name: "Anthony Hernandez", image: anthonyImg },
-  { title: "Associate Director", name: "Cohen Moncada", image: cohenImg },
-  { title: "Director of Organizational Development", name: "Enrico Metzger", image: enricoImg },
-  { title: "Director of Programs", name: "Lia Tovar", image: liaImg },
-  { title: "Director of Marketing", name: "Faris Ebrahim", image: farisImg },
-  { title: "Director of Finance", name: "Josh Petite", image: joshImg },
+  { title: "Executive Director", name: "Anthony Hernandez", image: anthonyImg, linkedin: "https://linkedin.com/in/" },
+  { title: "Associate Director", name: "Cohen Moncada", image: cohenImg, linkedin: "https://linkedin.com/in/" },
+  { title: "Director of Organizational Development", name: "Enrico Metzger", image: enricoImg, linkedin: "https://linkedin.com/in/" },
+  { title: "Director of Programs", name: "Lia Tovar", image: liaImg, linkedin: "https://linkedin.com/in/" },
+  { title: "Director of Marketing", name: "Faris Ebrahim", image: farisImg, linkedin: "https://linkedin.com/in/" },
+  { title: "Director of Finance", name: "Josh Petite", image: joshImg, linkedin: "https://linkedin.com/in/" },
 ];
 
 const governingDocs = [
@@ -69,19 +69,28 @@ const StateCommission = () => {
               The individuals responsible for guiding CAPSO's statewide vision and operations.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {leadershipRoles.map((role) => (
               <div
                 key={role.title}
-                className="bg-card border border-border rounded-lg p-6 text-center"
+                className="bg-card border border-border rounded-xl p-8 text-center flex flex-col items-center"
               >
                 <img
                   src={role.image}
                   alt={role.name}
-                  className="w-20 h-20 rounded-full object-cover mx-auto mb-4"
+                  className="w-32 h-32 rounded-full object-cover mb-5"
                 />
-                <h3 className="text-base font-bold text-card-foreground mb-1">{role.title}</h3>
-                <p className="text-sm text-muted-foreground">{role.name}</p>
+                <h3 className="text-lg font-bold text-card-foreground mb-1">{role.title}</h3>
+                <p className="text-muted-foreground mb-4">{role.name}</p>
+                <a
+                  href={role.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  LinkedIn
+                </a>
               </div>
             ))}
           </div>
