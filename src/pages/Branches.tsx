@@ -106,15 +106,9 @@ const Branches = () => {
             <p className="text-muted-foreground max-w-xl mx-auto mb-6">
               CAPSO is always looking to expand. If you're a CAP student interested in starting a branch at your university, we'd love to hear from you.
             </p>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-medium hover:bg-primary/90 transition-colors"
-            >
-              Start a Branch Interest Form
-              <ExternalLink className="w-4 h-4" />
-            </a>
+            <span className="inline-flex items-center gap-2 bg-muted-foreground/20 text-muted-foreground px-6 py-3 rounded-md font-medium cursor-default">
+              Branch Interest Form — Coming Soon
+            </span>
           </div>
         </div>
       </section>
