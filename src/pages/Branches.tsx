@@ -1,16 +1,13 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
-import { MapPin, Mail, Linkedin, Instagram, Copy, Check } from "lucide-react";
+import { MapPin, Mail, Linkedin, Instagram, Copy, Check, ExternalLink } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const campuses = [
-  { name: "UT Arlington", status: "Active" as const, email: "capso.uta@gmail.com", linkedin: "https://linkedin.com/company/capso-uta", instagram: "https://instagram.com/capso.uta" },
-  { name: "UT San Antonio", status: "Active" as const, email: "capso.utsa@gmail.com", linkedin: "https://linkedin.com/company/capso-utsa", instagram: "https://instagram.com/capso.utsa" },
-  { name: "UT Tyler", status: "Active" as const, email: "capso.utt@gmail.com", linkedin: "https://linkedin.com/company/capso-utt", instagram: "https://instagram.com/capso.utt" },
-  { name: "UT El Paso", status: "Developing" as const, email: "capso.utep@gmail.com", linkedin: "https://linkedin.com/company/capso-utep", instagram: "https://instagram.com/capso.utep" },
-  { name: "UT Rio Grand Valley", status: "Developing" as const, email: "capso.utrgv@gmail.com", linkedin: "https://linkedin.com/company/capso-utrgv", instagram: "https://instagram.com/capso.utrgv" },
-  { name: "UT Permian Basin", status: "Developing" as const, email: "capso.utpb@gmail.com", linkedin: "https://linkedin.com/company/capso-utpb", instagram: "https://instagram.com/capso.utpb" },
-  { name: "Stephen F. Austin State", status: "Active" as const, email: "capso.sfa@gmail.com", linkedin: "https://linkedin.com/company/capso-sfa", instagram: "https://instagram.com/capso.sfa" },
+  { name: "UT Arlington", email: "capso.uta@gmail.com", linkedin: "https://linkedin.com/company/capso-uta", instagram: "https://instagram.com/capso.uta" },
+  { name: "UT San Antonio", email: "capso.utsa@gmail.com", linkedin: "https://linkedin.com/company/capso-utsa", instagram: "https://instagram.com/capso.utsa" },
+  { name: "UT Tyler", email: "capso.utt@gmail.com", linkedin: "https://linkedin.com/company/capso-utt", instagram: "https://instagram.com/capso.utt" },
+  { name: "Stephen F. Austin State", email: "capso.sfa@gmail.com", linkedin: "https://linkedin.com/company/capso-sfa", instagram: "https://instagram.com/capso.sfa" },
 ];
 
 const CopyButton = ({ text }: { text: string }) => {
@@ -57,33 +54,22 @@ const Branches = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Campuses</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Active Branches</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               CAPSO is expanding across Texas. Each branch operates under the same statewide standards while serving its unique campus community.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {campuses.map((campus) => (
               <div
                 key={campus.name}
                 className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow"
               >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                      <MapPin className="w-5 h-5 text-primary" />
-                    </div>
-                    <h3 className="font-bold text-card-foreground">{campus.name}</h3>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                    <MapPin className="w-5 h-5 text-primary" />
                   </div>
-                  <span
-                    className={`text-xs font-semibold px-2.5 py-1 rounded-full ${
-                      campus.status === "Active"
-                        ? "bg-green-100 text-green-800"
-                        : "bg-amber-100 text-amber-800"
-                    }`}
-                  >
-                    {campus.status}
-                  </span>
+                  <h3 className="font-bold text-card-foreground">{campus.name}</h3>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
                   <Mail className="w-4 h-4 shrink-0" />
@@ -112,6 +98,23 @@ const Branches = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Don't See Your School? */}
+          <div className="mt-14 text-center bg-muted rounded-xl p-10 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-foreground mb-3">Don't see your school?</h3>
+            <p className="text-muted-foreground max-w-xl mx-auto mb-6">
+              CAPSO is always looking to expand. If you're a CAP student interested in starting a branch at your university, we'd love to hear from you.
+            </p>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-medium hover:bg-primary/90 transition-colors"
+            >
+              Start a Branch Interest Form
+              <ExternalLink className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </section>
