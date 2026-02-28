@@ -1,13 +1,17 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
-import { MapPin, Mail, Linkedin, Instagram, Copy, Check, ExternalLink } from "lucide-react";
+import { Mail, Linkedin, Instagram, Copy, Check } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import capsoUtaLogo from "@/assets/capso-uta-logo.png";
+import capsoUtsaLogo from "@/assets/capso-utsa-logo.png";
+import capsoUttLogo from "@/assets/capso-utt-logo.png";
+import capsoSfaLogo from "@/assets/capso-sfa-logo.png";
 
 const campuses = [
-  { name: "UT Arlington", email: "capso.uta@gmail.com", linkedin: "https://linkedin.com/company/capso-uta", instagram: "https://instagram.com/capso.uta" },
-  { name: "UT San Antonio", email: "capso.utsa@gmail.com", linkedin: "https://linkedin.com/company/capso-utsa", instagram: "https://instagram.com/capso.utsa" },
-  { name: "UT Tyler", email: "capso.utt@gmail.com", linkedin: "https://linkedin.com/company/capso-utt", instagram: "https://instagram.com/capso.utt" },
-  { name: "Stephen F. Austin State", email: "capso.sfa@gmail.com", linkedin: "https://linkedin.com/company/capso-sfa", instagram: "https://instagram.com/capso.sfa" },
+  { name: "UT Arlington", email: "capso.uta@gmail.com", linkedin: "https://linkedin.com/company/capso-uta", instagram: "https://instagram.com/capso.uta", logo: capsoUtaLogo },
+  { name: "UT San Antonio", email: "capso.utsa@gmail.com", linkedin: "https://linkedin.com/company/capso-utsa", instagram: "https://instagram.com/capso.utsa", logo: capsoUtsaLogo },
+  { name: "UT Tyler", email: "capso.utt@gmail.com", linkedin: "https://linkedin.com/company/capso-utt", instagram: "https://instagram.com/capso.utt", logo: capsoUttLogo },
+  { name: "Stephen F. Austin State", email: "capso.sfa@gmail.com", linkedin: "https://linkedin.com/company/capso-sfa", instagram: "https://instagram.com/capso.sfa", logo: capsoSfaLogo },
 ];
 
 const CopyButton = ({ text }: { text: string }) => {
@@ -66,9 +70,7 @@ const Branches = () => {
                 className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                    <MapPin className="w-5 h-5 text-primary" />
-                  </div>
+                  <img src={campus.logo} alt={`${campus.name} logo`} className="w-10 h-10 rounded-lg object-cover shrink-0" />
                   <h3 className="font-bold text-card-foreground">{campus.name}</h3>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
