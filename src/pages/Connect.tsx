@@ -1,26 +1,55 @@
-import { useState } from "react";
 import Layout from "@/components/Layout";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Mail, Linkedin, Instagram } from "lucide-react";
+import { Mail, Linkedin, Instagram, Copy, Check } from "lucide-react";
+import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
-const Connect = () => {
-  const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+const emails = [
+  { label: "General Inquiries", email: "capso.texas@gmail.com" },
+  { label: "UT Arlington", email: "capso.uta@gmail.com" },
+  { label: "UT San Antonio", email: "capso.utsa@gmail.com" },
+  { label: "UT Tyler", email: "capso.utt@gmail.com" },
+  { label: "UT El Paso", email: "capso.utep@gmail.com" },
+  { label: "UT Rio Grand Valley", email: "capso.utrgv@gmail.com" },
+  { label: "UT Permian Basin", email: "capso.utpb@gmail.com" },
+  { label: "Stephen F. Austin State", email: "capso.sfa@gmail.com" },
+];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const mailto = `mailto:capso.texas@gmail.com?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(`From: ${form.name} (${form.email})\n\n${form.message}`)}`;
-    window.location.href = mailto;
-    toast({
-      title: "Opening your email client",
-      description: "Complete sending in your email app.",
-    });
-    setForm({ name: "", email: "", subject: "", message: "" });
+const CopyEmailRow = ({ label, email }: { label: string; email: string }) => {
+  const [copied, setCopied] = useState(false);
+  const { toast } = useToast();
+
+  const handleCopy = async () => {
+    await navigator.clipboard.writeText(email);
+    setCopied(true);
+    toast({ title: "Copied!", description: `${email} copied to clipboard.` });
+    setTimeout(() => setCopied(false), 2000);
   };
 
+  return (
+    <div className="flex items-center justify-between bg-card border border-border rounded-lg px-5 py-4 hover:shadow-md transition-shadow">
+      <div className="flex items-center gap-4">
+        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+          <Mail className="w-5 h-5 text-primary" />
+        </div>
+        <div>
+          <p className="text-sm text-muted-foreground">{label}</p>
+          <a href={`mailto:${email}`} className="font-medium text-foreground hover:text-primary transition-colors">
+            {email}
+          </a>
+        </div>
+      </div>
+      <button
+        onClick={handleCopy}
+        className="ml-4 w-9 h-9 rounded-lg border border-border flex items-center justify-center hover:bg-primary/10 transition-colors shrink-0"
+        aria-label={`Copy ${email}`}
+      >
+        {copied ? <Check className="w-4 h-4 text-green-600" /> : <Copy className="w-4 h-4 text-muted-foreground" />}
+      </button>
+    </div>
+  );
+};
+
+const Connect = () => {
   return (
     <Layout>
       {/* Hero */}
@@ -33,111 +62,52 @@ const Connect = () => {
             Get in Touch
           </h1>
           <p className="text-secondary-foreground/70 text-lg max-w-2xl">
-            Have questions, partnership ideas, or just want to connect? We'd love to hear from you.
+            Have questions, partnership ideas, or just want to connect? Reach out to us directly.
           </p>
         </div>
       </section>
 
-      {/* Contact + Form */}
+      {/* Email Directory */}
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid md:grid-cols-5 gap-12">
-            {/* Contact Info */}
-            <div className="md:col-span-2 space-y-8">
-              <div>
-                <h2 className="text-2xl font-bold text-foreground mb-6">Contact Information</h2>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                      <Mail className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground">General Inquiries</p>
-                      <a href="mailto:capso.texas@gmail.com" className="text-foreground font-medium hover:text-primary transition-colors">
-                        capso.texas@gmail.com
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-4">Email Directory</h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Find the right contact for your inquiry. Click any email to open your mail app, or use the copy button.
+            </p>
+          </div>
+          <div className="space-y-3">
+            {emails.map((item) => (
+              <CopyEmailRow key={item.email} label={item.label} email={item.email} />
+            ))}
+          </div>
+        </div>
+      </section>
 
-              <div>
-                <h3 className="font-bold text-foreground mb-4">Follow Us</h3>
-                <div className="flex gap-3">
-                  <a
-                    href="http://linkedin.com/company/cap-student-organization"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-lg bg-card border border-border flex items-center justify-center hover:bg-primary/10 transition-colors"
-                  >
-                    <Linkedin className="w-5 h-5 text-foreground" />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/txcapso"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-lg bg-card border border-border flex items-center justify-center hover:bg-primary/10 transition-colors"
-                  >
-                    <Instagram className="w-5 h-5 text-foreground" />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Inquiry Form */}
-            <div className="md:col-span-3">
-              <div className="bg-card border border-border rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-card-foreground mb-2">Send Us a Message</h2>
-                <p className="text-sm text-muted-foreground mb-6">
-                  For general inquiries, partnership opportunities, or anything else.
-                </p>
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="text-sm font-medium text-foreground mb-1.5 block">Name</label>
-                      <Input
-                        required
-                        value={form.name}
-                        onChange={(e) => setForm({ ...form, name: e.target.value })}
-                        placeholder="Your name"
-                      />
-                    </div>
-                    <div>
-                      <label className="text-sm font-medium text-foreground mb-1.5 block">Email</label>
-                      <Input
-                        required
-                        type="email"
-                        value={form.email}
-                        onChange={(e) => setForm({ ...form, email: e.target.value })}
-                        placeholder="you@example.com"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-1.5 block">Subject</label>
-                    <Input
-                      required
-                      value={form.subject}
-                      onChange={(e) => setForm({ ...form, subject: e.target.value })}
-                      placeholder="What's this about?"
-                    />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-1.5 block">Message</label>
-                    <Textarea
-                      required
-                      rows={5}
-                      value={form.message}
-                      onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      placeholder="Tell us more..."
-                    />
-                  </div>
-                  <Button type="submit" size="lg" className="w-full font-semibold">
-                    Send Message
-                  </Button>
-                </form>
-              </div>
-            </div>
+      {/* Social */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4 lg:px-8 max-w-3xl text-center">
+          <h2 className="text-3xl font-bold text-foreground mb-4">Follow Us</h2>
+          <p className="text-muted-foreground mb-8">Stay connected with CAPSO on social media.</p>
+          <div className="flex justify-center gap-4">
+            <a
+              href="http://linkedin.com/company/cap-student-organization"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-6 py-3 rounded-lg bg-card border border-border font-semibold text-foreground hover:bg-primary/10 transition-colors"
+            >
+              <Linkedin className="w-5 h-5" />
+              LinkedIn
+            </a>
+            <a
+              href="https://www.instagram.com/txcapso"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-6 py-3 rounded-lg bg-card border border-border font-semibold text-foreground hover:bg-primary/10 transition-colors"
+            >
+              <Instagram className="w-5 h-5" />
+              Instagram
+            </a>
           </div>
         </div>
       </section>
