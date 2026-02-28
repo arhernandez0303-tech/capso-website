@@ -1,5 +1,7 @@
+import { useState } from "react";
 import Layout from "@/components/Layout";
-import { MapPin, Mail, Linkedin, Instagram } from "lucide-react";
+import { MapPin, Mail, Linkedin, Instagram, Copy, Check } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const campuses = [
   { name: "UT Arlington", status: "Active" as const, email: "capso.uta@gmail.com", linkedin: "https://linkedin.com/company/capso-uta", instagram: "https://instagram.com/capso.uta" },
@@ -10,6 +12,28 @@ const campuses = [
   { name: "UT Permian Basin", status: "Developing" as const, email: "capso.utpb@gmail.com", linkedin: "https://linkedin.com/company/capso-utpb", instagram: "https://instagram.com/capso.utpb" },
   { name: "Stephen F. Austin State", status: "Active" as const, email: "capso.sfa@gmail.com", linkedin: "https://linkedin.com/company/capso-sfa", instagram: "https://instagram.com/capso.sfa" },
 ];
+
+const CopyButton = ({ text }: { text: string }) => {
+  const [copied, setCopied] = useState(false);
+  const { toast } = useToast();
+
+  const handleCopy = async () => {
+    await navigator.clipboard.writeText(text);
+    setCopied(true);
+    toast({ title: "Copied!", description: `${text} copied to clipboard.` });
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <button
+      onClick={handleCopy}
+      className="w-7 h-7 rounded-md border border-border flex items-center justify-center hover:bg-primary/10 transition-colors shrink-0"
+      aria-label={`Copy ${text}`}
+    >
+      {copied ? <Check className="w-3.5 h-3.5 text-green-600" /> : <Copy className="w-3.5 h-3.5 text-muted-foreground" />}
+    </button>
+  );
+};
 
 const Branches = () => {
   return (
@@ -66,6 +90,7 @@ const Branches = () => {
                   <a href={`mailto:${campus.email}`} className="hover:text-primary transition-colors">
                     {campus.email}
                   </a>
+                  <CopyButton text={campus.email} />
                 </div>
                 <div className="flex items-center gap-2">
                   <a
