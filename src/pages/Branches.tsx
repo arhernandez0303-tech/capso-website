@@ -54,7 +54,7 @@ const Branches = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Active Branches</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Current Branches</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               CAPSO is expanding across Texas. Each branch operates under the same statewide standards while serving its unique campus community.
             </p>
