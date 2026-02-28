@@ -12,9 +12,11 @@ const Connect = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const mailto = `mailto:capso.texas@gmail.com?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(`From: ${form.name} (${form.email})\n\n${form.message}`)}`;
+    window.location.href = mailto;
     toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. We'll get back to you soon.",
+      title: "Opening your email client",
+      description: "Complete sending in your email app.",
     });
     setForm({ name: "", email: "", subject: "", message: "" });
   };
