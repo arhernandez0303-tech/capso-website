@@ -1,14 +1,14 @@
 import Layout from "@/components/Layout";
-import { MapPin, Mail } from "lucide-react";
+import { MapPin, Mail, Linkedin, Instagram } from "lucide-react";
 
 const campuses = [
-  { name: "UT Arlington", status: "Active" as const, email: "capso.uta@gmail.com" },
-  { name: "UT San Antonio", status: "Active" as const, email: "capso.utsa@gmail.com" },
-  { name: "UT Tyler", status: "Active" as const, email: "capso.utt@gmail.com" },
-  { name: "UT El Paso", status: "Developing" as const, email: "capso.utep@gmail.com" },
-  { name: "UT Rio Grand Valley", status: "Developing" as const, email: "capso.utrgv@gmail.com" },
-  { name: "UT Permian Basin", status: "Developing" as const, email: "capso.utpb@gmail.com" },
-  { name: "Stephen F. Austin State", status: "Active" as const, email: "capso.sfa@gmail.com" },
+  { name: "UT Arlington", status: "Active" as const, email: "capso.uta@gmail.com", linkedin: "https://linkedin.com/company/capso-uta", instagram: "https://instagram.com/capso.uta" },
+  { name: "UT San Antonio", status: "Active" as const, email: "capso.utsa@gmail.com", linkedin: "https://linkedin.com/company/capso-utsa", instagram: "https://instagram.com/capso.utsa" },
+  { name: "UT Tyler", status: "Active" as const, email: "capso.utt@gmail.com", linkedin: "https://linkedin.com/company/capso-utt", instagram: "https://instagram.com/capso.utt" },
+  { name: "UT El Paso", status: "Developing" as const, email: "capso.utep@gmail.com", linkedin: "https://linkedin.com/company/capso-utep", instagram: "https://instagram.com/capso.utep" },
+  { name: "UT Rio Grand Valley", status: "Developing" as const, email: "capso.utrgv@gmail.com", linkedin: "https://linkedin.com/company/capso-utrgv", instagram: "https://instagram.com/capso.utrgv" },
+  { name: "UT Permian Basin", status: "Developing" as const, email: "capso.utpb@gmail.com", linkedin: "https://linkedin.com/company/capso-utpb", instagram: "https://instagram.com/capso.utpb" },
+  { name: "Stephen F. Austin State", status: "Active" as const, email: "capso.sfa@gmail.com", linkedin: "https://linkedin.com/company/capso-sfa", instagram: "https://instagram.com/capso.sfa" },
 ];
 
 const Branches = () => {
@@ -61,10 +61,28 @@ const Branches = () => {
                     {campus.status}
                   </span>
                 </div>
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
                   <Mail className="w-4 h-4 shrink-0" />
                   <a href={`mailto:${campus.email}`} className="hover:text-primary transition-colors">
                     {campus.email}
+                  </a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <a
+                    href={campus.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 rounded-lg bg-card border border-border flex items-center justify-center hover:bg-primary/10 transition-colors"
+                  >
+                    <Linkedin className="w-4 h-4 text-foreground" />
+                  </a>
+                  <a
+                    href={campus.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 rounded-lg bg-card border border-border flex items-center justify-center hover:bg-primary/10 transition-colors"
+                  >
+                    <Instagram className="w-4 h-4 text-foreground" />
                   </a>
                 </div>
               </div>
