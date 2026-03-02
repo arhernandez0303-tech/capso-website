@@ -89,7 +89,7 @@ const Index = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {pillars.map((pillar, i) => (
               <AnimatedSection key={pillar.title} delay={i * 0.1}>
-                <div className="bg-card border border-border rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+                <div className="bg-card border border-border rounded-lg p-6 text-center hover:shadow-lg transition-shadow h-full flex flex-col items-center">
                   <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5">
                     <pillar.icon className="w-7 h-7 text-primary" />
                   </div>

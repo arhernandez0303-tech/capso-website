@@ -63,12 +63,12 @@ const Connect = () => {
           {/* Social */}
           <div>
             <h3 className="font-bold text-foreground mb-5">Follow Us</h3>
-            <div className="flex justify-center gap-4">
+            <div className="grid grid-cols-2 gap-4 max-w-sm mx-auto">
               <a
                 href="http://linkedin.com/company/cap-student-organization"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-6 py-3 rounded-lg bg-card border border-border font-semibold text-foreground hover:bg-primary/10 transition-colors"
+                className="flex items-center justify-center gap-2 px-6 py-4 rounded-lg bg-card border border-border font-semibold text-foreground hover:bg-primary/10 transition-colors"
               >
                 <Linkedin className="w-5 h-5" />
                 LinkedIn
@@ -77,7 +77,7 @@ const Connect = () => {
                 href="https://www.instagram.com/txcapso"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-6 py-3 rounded-lg bg-card border border-border font-semibold text-foreground hover:bg-primary/10 transition-colors"
+                className="flex items-center justify-center gap-2 px-6 py-4 rounded-lg bg-card border border-border font-semibold text-foreground hover:bg-primary/10 transition-colors"
               >
                 <Instagram className="w-5 h-5" />
                 Instagram
