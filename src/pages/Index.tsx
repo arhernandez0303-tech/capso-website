@@ -39,6 +39,8 @@ const Index = () => {
             src={heroImage}
             alt="CAPSO students collaborating"
             className="w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/70 to-secondary/40" />
         </div>
