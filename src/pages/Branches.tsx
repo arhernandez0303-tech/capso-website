@@ -10,7 +10,7 @@ import capsoSfaLogo from "@/assets/capso-sfa-logo.png";
 const campuses = [
   { name: "UT Arlington", email: "capso.uta@gmail.com", linkedin: "https://linkedin.com/company/capso-uta", instagram: "https://instagram.com/capso.uta", logo: capsoUtaLogo },
   { name: "UT San Antonio", email: "capso.utsa@gmail.com", linkedin: "https://linkedin.com/company/capso-utsa", instagram: "https://instagram.com/capso.utsa", logo: capsoUtsaLogo },
-  { name: "UT Tyler", email: "capso.utt@gmail.com", linkedin: "https://linkedin.com/company/capso-utt", instagram: "https://instagram.com/capso.utt", logo: capsoUttLogo },
+  { name: "UT Tyler", email: "capso.utt@gmail.com", linkedin: "https://linkedin.com/showcase/capso-utt/about/", instagram: "https://instagram.com/capso.utt", logo: capsoUttLogo },
   { name: "Stephen F. Austin State", email: "capso.sfa@gmail.com", linkedin: "https://linkedin.com/company/capso-sfa", instagram: "https://instagram.com/capso.sfa", logo: capsoSfaLogo },
 ];
 
