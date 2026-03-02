@@ -63,24 +63,28 @@ const Connect = () => {
           {/* Social */}
           <div>
             <h3 className="font-bold text-foreground mb-5">Follow Us</h3>
-            <div className="grid grid-cols-2 gap-4 max-w-sm mx-auto">
+            <div className="grid grid-cols-2 gap-4">
               <a
                 href="http://linkedin.com/company/cap-student-organization"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-6 py-4 rounded-lg bg-card border border-border font-semibold text-foreground hover:bg-primary/10 transition-colors"
+                className="bg-card border border-border rounded-xl p-8 flex flex-col items-center gap-4 hover:shadow-lg transition-shadow"
               >
-                <Linkedin className="w-5 h-5" />
-                LinkedIn
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <Linkedin className="w-7 h-7 text-primary" />
+                </div>
+                <span className="text-lg font-bold text-foreground">LinkedIn</span>
               </a>
               <a
                 href="https://www.instagram.com/txcapso"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-6 py-4 rounded-lg bg-card border border-border font-semibold text-foreground hover:bg-primary/10 transition-colors"
+                className="bg-card border border-border rounded-xl p-8 flex flex-col items-center gap-4 hover:shadow-lg transition-shadow"
               >
-                <Instagram className="w-5 h-5" />
-                Instagram
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <Instagram className="w-7 h-7 text-primary" />
+                </div>
+                <span className="text-lg font-bold text-foreground">Instagram</span>
               </a>
             </div>
           </div>
