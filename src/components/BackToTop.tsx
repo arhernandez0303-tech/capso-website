@@ -1,6 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, forwardRef } from "react";
 import { ArrowUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+
+const MotionButton = motion.create(
+  forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement>>(
+    (props, ref) => <button ref={ref} {...props} />
+  )
+);
 
 const BackToTop = () => {
   const [visible, setVisible] = useState(false);
@@ -14,7 +20,7 @@ const BackToTop = () => {
   return (
     <AnimatePresence>
       {visible && (
-        <motion.button
+        <MotionButton
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.8 }}
@@ -24,7 +30,7 @@ const BackToTop = () => {
           aria-label="Back to top"
         >
           <ArrowUp className="w-5 h-5" />
-        </motion.button>
+        </MotionButton>
       )}
     </AnimatePresence>
   );

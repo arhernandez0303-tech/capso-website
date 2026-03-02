@@ -70,7 +70,7 @@ const Branches = () => {
                 className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <img src={campus.logo} alt={`${campus.name} logo`} className="w-10 h-10 rounded-lg object-cover shrink-0" />
+                  <img src={campus.logo} alt={`${campus.name} logo`} className="w-10 h-10 rounded-lg object-cover shrink-0" loading="lazy" />
                   <h3 className="font-bold text-card-foreground">{campus.name}</h3>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
