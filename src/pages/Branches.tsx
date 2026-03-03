@@ -8,10 +8,10 @@ import capsoUttLogo from "@/assets/capso-utt-logo.png";
 import capsoSfaLogo from "@/assets/capso-sfa-logo.png";
 
 const campuses = [
-  { name: "UT Arlington", email: "capso.uta@gmail.com", linkedin: "https://www.linkedin.com/showcase/capso-uta/about/", instagram: "https://instagram.com/capso.uta", logo: capsoUtaLogo },
+  { name: "UT Arlington", email: "capso.uta@gmail.com", linkedin: "https://www.linkedin.com/showcase/capso-uta/about/", instagram: "https://www.instagram.com/capso.uta/", logo: capsoUtaLogo },
   { name: "UT San Antonio", email: "capso.utsa@gmail.com", linkedin: "https://www.linkedin.com/showcase/capso-utsa/about/", instagram: "https://instagram.com/capso.utsa", logo: capsoUtsaLogo },
-  { name: "UT Tyler", email: "capso.utt@gmail.com", linkedin: "https://www.linkedin.com/showcase/capso-utt/about/", instagram: "https://instagram.com/capso.utt", logo: capsoUttLogo },
-  { name: "Stephen F. Austin State", email: "capso.sfa@gmail.com", linkedin: "https://www.linkedin.com/showcase/capso-sfa/about/", instagram: "https://instagram.com/capso.sfa", logo: capsoSfaLogo },
+  { name: "UT Tyler", email: "capso.utt@gmail.com", linkedin: "https://www.linkedin.com/showcase/capso-utt/about/", instagram: "https://www.instagram.com/uttylercapstudentorg/", logo: capsoUttLogo },
+  { name: "Stephen F. Austin State", email: "capso.sfa@gmail.com", linkedin: "https://www.linkedin.com/showcase/capso-sfa/about/", instagram: "https://www.instagram.com/sfacap/", logo: capsoSfaLogo },
 ];
 
 const CopyButton = ({ text }: { text: string }) => {
