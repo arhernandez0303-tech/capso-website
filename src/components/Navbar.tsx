@@ -22,7 +22,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 bg-primary/95 backdrop-blur border-b border-primary/80">
       <nav className="container mx-auto flex items-center justify-between h-16 px-4 lg:px-8">
         <Link to="/" className="flex items-center gap-3">
-          <img src={capsoLogo} alt="CAPSO" className="h-10 w-auto" />
+          <img src={capsoLogo} alt="CAPSO" className="h-10 w-auto" width="40" height="40" />
         </Link>
 
         {/* Desktop nav */}
