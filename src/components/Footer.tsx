@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import capsoLogo from "@/assets/capso-logo.png";
+import capsoLogo from "@/assets/capso-logo.png?w=96";
 
 const Footer = () => {
   return (
