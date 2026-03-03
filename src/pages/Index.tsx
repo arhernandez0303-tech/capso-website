@@ -3,7 +3,7 @@ import { BookOpen, Users, GraduationCap, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
-import heroImage from "@/assets/hero-image.jpg";
+import heroImage from "@/assets/hero-image.jpg?format=webp&w=1400";
 import { motion } from "framer-motion";
 
 const pillars = [

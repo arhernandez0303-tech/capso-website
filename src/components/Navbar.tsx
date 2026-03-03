@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import capsoLogo from "@/assets/capso-logo.png";
+import capsoLogo from "@/assets/capso-logo.png?w=80";
 
 const navLinks = [
   { label: "Home", to: "/" },
